@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -13,4 +14,166 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.menu-bar {
+  border-radius: 25px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline-flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 0 10px;
+  margin: 50px auto;
+  box-shadow: 0px 3px 20px 0px rgba(47, 47, 47, 0.5);
+}
+.menu-bar li {
+  list-style: none;
+  color: white;
+  font-weight: normal;
+  padding: 12px 16px;
+  margin: 0 8px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.menu-bar li::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.2s;
+  /* border-radius: 25px; */
+}
+.menu-bar li:hover {
+  color: black;
+}
+.menu-bar li:hover::before {
+  background-color: #fff;
+  color: #777;
+  box-shadow: 0px 3px 20px 0px rgb(47, 47, 47);
+  /* transform: scale(1.2); */
+}
+
+/* 404 error page  */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* 404 error page styles  */
+
+#notfound {
+  position: relative;
+  height: 80vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 920px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.notfound .notfound-404 {
+  position: absolute;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: "Maven Pro", sans-serif;
+  color: #ececec;
+  font-weight: 900;
+  font-size: 276px;
+  margin: 0px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound h2 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 46px;
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.notfound p {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.notfound a {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #189cf0;
+  display: inline-block;
+  padding: 16px 38px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 400;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound a:hover {
+  background-color: #fff;
+  border-color: #189cf0;
+  color: #189cf0;
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 h1 {
+    font-size: 162px;
+  }
+  .notfound h2 {
+    font-size: 26px;
+  }
 }
